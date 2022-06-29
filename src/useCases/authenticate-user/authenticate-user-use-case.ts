@@ -1,5 +1,4 @@
 import { compare } from "bcryptjs";
-import { sign } from "jsonwebtoken";
 import { RefresTokenProvider } from "../../provider/db/refresh-token";
 import { envVars } from "../../config/env-variables";
 import { client } from "../../prisma/client";
