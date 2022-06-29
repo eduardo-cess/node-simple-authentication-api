@@ -11,10 +11,20 @@ datasource db {
 }
 
 model User {
-  id String @default(uuid())
+  id String @default(uuid()) @unique
   name String
   username String @unique
   password String
+  refresh_token RefreshToken?
 
   @@map("users")
+}
+
+model RefreshToken {
+  id String @default(uuid()) @unique
+  expiresIn Int
+  userId String
+  user User @relation(fields: [userId], references: [id])
+
+  @@map("refresh_token")
 }
