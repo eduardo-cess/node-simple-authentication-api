@@ -7,6 +7,8 @@ files:
     destination: /home/application
   - source: /node_modules
     destination: /home/application/node_modules
+  - source: /prisma
+    destination: /home/application/prisma
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
