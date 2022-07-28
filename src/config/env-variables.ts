@@ -3,6 +3,7 @@ require("dotenv").config()
 import getenv from "getenv";
 
 export const envVars = {
+  port: getenv.string("PORT"),
   privateKey: getenv.string("PRIVATE_KEY"),
   publicKey: getenv.string("PUBLIC_KEY"),
   databaseUrl: getenv.string("DATABASE_URL"),
